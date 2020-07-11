@@ -1,0 +1,59 @@
+/*=========== Navbar ===========*/
+#sidebutton{
+    color: white;
+    font-size: 1.1em;
+    transition: all .2s;
+    cursor: pointer;
+}
+#sidebutton:hover{
+    color: rgb(52, 53, 54);
+}
+/*=========== Sidebar ===========*/
+.sidebar{
+    z-index: 99;
+    width: 250px;
+    height: 100vh;
+    transition: all .3s;
+}
+.sidebar a{
+    transition: all .4s;
+}
+.sidebar a:hover{
+    background-color: #007bff;
+    color: white;
+}
+#checkside{
+    display: none;
+}
+#checkside:checked ~ .sidebar{
+    transform: translateX(-200px);
+}
+#checkside:checked ~ .sidebar span{
+    display: none;
+}
+#checkside:checked ~ .sidebar i{
+    padding-left: 184px;
+}
+#checkside:checked ~ .sidebar .user{
+    opacity: 0;
+}
+#checkside:checked ~ .content{
+    margin-left: 20px;
+}
+.content{
+    margin-left: 260px;
+    transition: all .3s;
+}
+.icon{
+    right: 25px;
+    bottom: 10px;
+    opacity: .3;
+}
+@media (max-width: 567px){
+    .leftnav a,.leftnav i{
+        font-size: .9em;
+    }
+    .leftnav img{
+        display: none;
+    }
+}
